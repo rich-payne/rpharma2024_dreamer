@@ -12,7 +12,16 @@ mod_linear <- model_linear(
 
 mod_linear
 
-class(linear)
+class(mod_linear)
+
+set.seed(88)
+data <- dreamer_data_independent(
+  n_cohorts = c(25, 25, 25, 25),
+  doses = c(0, 3, 9, 21),
+  # response at each dose -- see documentation
+  b1 = c(1, 5, 8, 9),
+  sigma = 3
+)
 
 mcmc4 <- dreamer_mcmc(
   data = data,
@@ -20,7 +29,7 @@ mcmc4 <- dreamer_mcmc(
 )
 
 class(mcmc4)
-class(mcmc$indep)
+class(mcmc4$linear)
 
 # documentation for plotting method
 ?plot.dreamer_mcmc

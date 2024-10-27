@@ -1,4 +1,5 @@
 library(dreamer)
+library(ggplot2)
 
 set.seed(889)
 data_long <- dreamer_data_linear(

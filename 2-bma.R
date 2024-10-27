@@ -66,6 +66,7 @@ mcmc2$w_post
 
 # plot BMA fit
 plot(mcmc2, data = data2)
+
 # plot individual model
 plot(mcmc2$linear, data = data2)
 plot(mcmc2$loglinear, data = data2)
@@ -73,7 +74,7 @@ plot(mcmc2$emax, data = data2)
 
 # compare model fits graphically
 plot_comparison(mcmc2)
-plot_comparison(mcmc2, data = data) +
+plot_comparison(mcmc2, data = data2) +
   facet_wrap(~Model)
 
 # posterior for Bayesian model averaging
